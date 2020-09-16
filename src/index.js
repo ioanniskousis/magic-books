@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import booksSeed from './booksSeed';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App
+      books={booksSeed}
+    />
   </React.StrictMode>,
   document.getElementById('root'),
 );

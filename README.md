@@ -25,7 +25,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/ioanniskousis/magic-books">
-    <img src="src/resourses/images/microverse.png" alt="Microverse Logo" width="80" height="80">
+    <img src="src/resources/images/microverse.png" alt="Microverse Logo" width="80" height="80">
   </a>
   
   <h3 align="center">The Magic Books Application</h3>

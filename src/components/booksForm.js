@@ -22,7 +22,7 @@ export default class BooksForm extends React.Component {
 
     return (
       <div className="BooksForm">
-        <input name="title" id="title"/>
+        <input name="title" id="title" />
         <select name="category" id="category">
           {categoryOptions}
         </select>

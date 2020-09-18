@@ -75,17 +75,17 @@ The project was created using the create-react-app model
 
 The project files tree:
 
--src
-  -components
-    book.js
-    booksList.js
-    booksForm.js
-  -containers
-  -actions
-    index.js
-  -reducers
-    books.js
-    index.js
+-src  
+  -components  
+    book.js  
+    booksList.js  
+    booksForm.js  
+  -containers  
+  -actions  
+    index.js  
+  -reducers  
+    books.js  
+    index.js  
 
   - Componets BooksList, Book, and BooksForm are help in respective files in components/ folder  
   - Actions createBook and removeBook are in actions/index.js  

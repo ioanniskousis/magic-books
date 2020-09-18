@@ -1,3 +1,8 @@
+table {
+  margin: auto;
+  border-collapse: collapse;
+}
+
 td,
 th {
   padding: 10px 30px;

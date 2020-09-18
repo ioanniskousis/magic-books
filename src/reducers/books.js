@@ -10,12 +10,12 @@ const booksReducer = (state = [], action) => {
     case CREATE_BOOK:
       return [
         ...state,
-        action.message,
+        action.book,
       ];
     case REMOVE_BOOK:
     {
       const { bookId } = action;
-      const index = state.findIndex(bookWithId(bookId));
+      const index = state.findIndex(book => bookWithId(book, bookId));
       const newState = state.slice(0, index).concat(state.slice(index + 1));
       return newState;
     }

@@ -1,20 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider, connect } from 'react-redux';
+import { createStore } from 'redux';
+import rootReducer from './reducers/index';
+import { createBook, removeBook } from './actions/index';
 import './index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
 import booksSeed from './booksSeed';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App
-      books={booksSeed}
-    />
-  </React.StrictMode>,
-  document.getElementById('root'),
+const store = createStore(rootReducer);
+
+const mapStateToProps = () => ({ books: booksSeed });
+
+const mapDispatchToProps = dispatch => ({
+  submitNewBook: newBook => {
+    dispatch(createBook(newBook));
+  },
+  removeBook: book => {
+    dispatch(removeBook(book));
+  },
+});
+
+const Container = connect(mapStateToProps, mapDispatchToProps)(App);
+
+const AppWrapper = () => (
+  <Provider store={store}>
+    <Container />
+  </Provider>
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(
+  <AppWrapper />,
+  document.getElementById('root'),
+);

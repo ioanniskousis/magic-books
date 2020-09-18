@@ -20,14 +20,18 @@ export default class BooksList extends React.Component {
 
     return (
       <div className="BooksList">
-        <tb>
-          <tr>
-            <th>Book ID</th>
-            <th>Title</th>
-            <th>Category</th>
-          </tr>
-          {rows}
-        </tb>
+        <table>
+          <thead>
+            <tr>
+              <th>Book ID</th>
+              <th>Title</th>
+              <th>Category</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows}
+          </tbody>
+        </table>
       </div>
     );
   }

@@ -1,28 +1,33 @@
-/* eslint-disable jsx-a11y/control-has-associated-label */
+/* eslint-disable react/prefer-stateless-function */
+/* eslint-disable no-plusplus */
 import React from 'react';
 
-export default function BooksForm() {
-  const options = [];
-  const categories = [
-    'Action',
-    'Biography',
-    'History',
-    'Horror',
-    'Kids',
-    'Learning',
-    'Sci-Fi',
-  ];
-  categories.map(cat => options.push(
-    <option value={cat}>{cat}</option>,
-  ));
+export default class BooksForm extends React.Component {
+  render() {
+    const categoryOptions = [];
+    const categoryNames = [
+      'Action',
+      'Biography',
+      'History',
+      'Horror',
+      'Kids',
+      'Learning',
+      'Sci-Fi',
+    ];
 
-  return (
-    <div className="BooksForm">
-      <input name="title"/>
-      <select name="category">
-        {options}
-      </select>
-      <input type="submit" value="Add New" />
-    </div>
-  );
+    let index = 1;
+    categoryNames.map(categoryName => categoryOptions.push(
+      <option key={index++} value={categoryName}>{categoryName}</option>,
+    ));
+
+    return (
+      <div className="BooksForm">
+        <input name="title" id="title"/>
+        <select name="category" id="category">
+          {categoryOptions}
+        </select>
+        <input type="submit" value="Add New" />
+      </div>
+    );
+  }
 }

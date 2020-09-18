@@ -73,6 +73,20 @@
 
 The project was created using the create-react-app model
 
+The project files tree:
+
+-src
+  -components
+    book.js
+    booksList.js
+    booksForm.js
+  -containers
+  -actions
+    index.js
+  -reducers
+    books.js
+    index.js
+
 <hr/>
 
 <!-- ABOUT THE PROJECT -->

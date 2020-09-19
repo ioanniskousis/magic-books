@@ -1,7 +1,7 @@
 /* eslint-disable react/forbid-prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
-import Book from './book';
+import Book from '../components/book';
 
 export default class BooksList extends React.Component {
   constructor(props) {

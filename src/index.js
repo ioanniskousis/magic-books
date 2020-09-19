@@ -5,7 +5,7 @@ import { createStore } from 'redux';
 import rootReducer from './reducers/index';
 import { createBook, removeBook } from './actions/index';
 import './index.css';
-import App from './App';
+import App from './components/App';
 import booksSeed from './booksSeed';
 
 const store = createStore(rootReducer);

@@ -3,9 +3,9 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import './App.css';
-import BooksList from './components/booksList';
-import BooksForm from './components/booksForm';
+import '../App.css';
+import BooksList from '../containers/booksList';
+import BooksForm from '../containers/booksForm';
 
 class App extends React.Component {
   render() {

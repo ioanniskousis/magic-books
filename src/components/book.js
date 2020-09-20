@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/prefer-stateless-function */
-/* eslint-disable react/forbid-prop-types */
+
 import React from 'react';
 
 export default class Book extends React.Component {

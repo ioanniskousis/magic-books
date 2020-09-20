@@ -73,6 +73,34 @@
 
 The project was created using the create-react-app model
 
+The project files tree:
+
+```
+-src  
+  -components  
+    book.js  
+    booksList.js  
+    booksForm.js  
+  -containers  
+  -actions  
+    index.js  
+  -reducers  
+    books.js  
+    index.js  
+  App.js
+  index.js
+  booksSeed.js
+```
+  - The entry point is root **index.js** where the **App** components is render through the **Container** components of Redux. 
+  - Componets **BooksList, Book, and BooksForm** are help in respective files in **components/** folder  
+  - Actions **createBook** and **removeBook** are in **actions/index.js**  
+  - Reducers are in **reducers/** folder, currently only 1, the **booksReducer** in reducers/books.js is combined into **rootReducer** held in reducers/index.js  
+  - The **App** component renders **BooksList** and **BooksForm** components  
+  - The **BookList** components renders the **books table**  
+  - The **BooksForm** is prepared to add new books  
+  - The **Book** component renders a **table row** with a book's data  
+  - The **booksSeed** array initializes the state with a set of books  
+
 <hr/>
 
 <!-- ABOUT THE PROJECT -->

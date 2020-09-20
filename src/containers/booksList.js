@@ -1,21 +1,20 @@
-/* eslint-disable react/forbid-prop-types */
+/* eslint-disable react/prop-types */
+/* eslint-disable react/prefer-stateless-function */
 import React from 'react';
-import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { removeBook } from '../actions/index';
 import Book from '../components/book';
 
-export default class BooksList extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      books: props.books,
-    };
-  }
-
+class BooksList extends React.Component {
   render() {
     const rows = [];
-    const { books } = this.state;
+    const { books } = this.props;
+    const { removeBook } = this.props;
     books.map(book => rows.push(
-      Book(book),
+      <Book
+        book={book}
+        removeBook={removeBook}
+      />,
     ));
 
     return (
@@ -37,10 +36,12 @@ export default class BooksList extends React.Component {
   }
 }
 
-BooksList.propTypes = {
-  books: PropTypes.array,
-};
+const mapStateToProps = state => ({
+  books: state.books,
+});
 
-BooksList.defaultProps = {
-  books: [],
-};
+const mapDispatchToProps = dispatch => ({
+  removeBook: book => dispatch(removeBook(book)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(BooksList);

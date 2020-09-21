@@ -4,6 +4,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { createBook } from '../actions/index';
+import { categoryOptions } from '../categories';
 
 class BooksForm extends React.Component {
   constructor(props) {
@@ -69,23 +70,6 @@ class BooksForm extends React.Component {
   }
 
   render() {
-    const categoryOptions = [];
-    const categoryNames = [
-      '',
-      'Action',
-      'Biography',
-      'History',
-      'Horror',
-      'Kids',
-      'Learning',
-      'Sci-Fi',
-    ];
-
-    let index = 1;
-    categoryNames.map(categoryName => categoryOptions.push(
-      <option key={index++} value={categoryName}>{categoryName}</option>,
-    ));
-
     const { title, category } = this.state;
 
     return (

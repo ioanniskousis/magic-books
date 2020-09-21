@@ -1,6 +1,5 @@
 /* eslint-disable class-methods-use-this */
 /* eslint-disable no-plusplus */
-
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -36,16 +35,10 @@ class BooksForm extends React.Component {
     const formError = document.getElementById('formError');
     if (title === '') {
       formError.innerHTML = "Title can't be empty";
-      setTimeout(() => {
-        formError.innerHTML = '';
-      }, 3000);
       return false;
     }
     if (category === '') {
       formError.innerHTML = "Category can't be empty";
-      setTimeout(() => {
-        formError.innerHTML = '';
-      }, 3000);
       return false;
     }
     return true;
@@ -71,6 +64,10 @@ class BooksForm extends React.Component {
     });
   }
 
+  focusField() {
+    document.getElementById('formError').innerHTML = '';
+  }
+
   render() {
     const categoryOptions = [];
     const categoryNames = [
@@ -93,8 +90,8 @@ class BooksForm extends React.Component {
 
     return (
       <div className="BooksForm">
-        <input name="title" id="title" value={title} onChange={this.handleChange} />
-        <select name="category" id="category" value={category} onChange={this.handleSelect}>
+        <input name="title" id="title" value={title} onChange={this.handleChange} onFocus={this.focusField} />
+        <select name="category" id="category" value={category} onChange={this.handleSelect} onFocus={this.focusField}>
           {categoryOptions}
         </select>
         <input type="submit" value="Add New" onClick={this.handleSubmit} />

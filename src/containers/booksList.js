@@ -1,41 +1,47 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable react/prefer-stateless-function */
-
+/* eslint-disable react/forbid-prop-types */
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { removeBook } from '../actions/index';
 import Book from '../components/book';
 
-class BooksList extends React.Component {
-  render() {
-    const rows = [];
-    const { books } = this.props;
-    const { removeBook } = this.props;
-    books.map(book => rows.push(
-      <Book
-        book={book}
-        removeBook={removeBook}
-      />,
-    ));
+const BooksList = ({ books, removeBook }) => {
+  const rows = [];
+  books.map(book => rows.push(
+    <Book
+      key={book.id}
+      book={book}
+      removeBook={removeBook}
+    />,
+  ));
 
-    return (
-      <div className="BooksList">
-        <table>
-          <thead>
-            <tr>
-              <th>Book ID</th>
-              <th>Title</th>
-              <th>Category</th>
-            </tr>
-          </thead>
-          <tbody>
-            {rows}
-          </tbody>
-        </table>
-      </div>
-    );
-  }
-}
+  return (
+    <div className="BooksList">
+      <table>
+        <thead>
+          <tr>
+            <th>Book ID</th>
+            <th>Title</th>
+            <th>Category</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows}
+        </tbody>
+      </table>
+    </div>
+  );
+};
+
+BooksList.propTypes = {
+  books: PropTypes.array,
+  removeBook: PropTypes.func,
+};
+
+BooksList.defaultProps = {
+  books: [],
+  removeBook: null,
+};
 
 const mapStateToProps = state => ({
   books: state.books,

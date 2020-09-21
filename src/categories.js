@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/control-has-associated-label */
 import React from 'react';
 
 const categoryNames = [
@@ -18,7 +17,7 @@ categoryNames.map(categoryName => {
   return options.push(<option key={index} value={categoryName}>{categoryName}</option>);
 });
 
-const categoryOptions = [(<option key="0" />), ...options];
+const categoryOptions = [(<option key="0"> </option>), ...options];
 
 const categoryFilterOptions = [(<option key="0">All</option>), ...options];
 

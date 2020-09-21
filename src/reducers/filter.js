@@ -1,6 +1,6 @@
 const CHANGE_FILTER = 'CHANGE_FILTER';
 
-const filter = (state = 'All', action) => {
+const filterChanged = (state = 'All', action) => {
   switch (action.type) {
     case CHANGE_FILTER:
       return action.selectedFilter;
@@ -9,4 +9,4 @@ const filter = (state = 'All', action) => {
   }
 };
 
-export default filter;
+export default filterChanged;

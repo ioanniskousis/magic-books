@@ -1,5 +1,4 @@
 /* eslint-disable class-methods-use-this */
-/* eslint-disable no-plusplus */
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -34,7 +33,7 @@ class BooksForm extends React.Component {
 
   validate(title, category) {
     const formError = document.getElementById('formError');
-    if (title === '') {
+    if (title.trim() === '') {
       formError.innerHTML = "Title can't be empty";
       return false;
     }

@@ -12,7 +12,7 @@ const removeBook = event => ({
   event,
 });
 
-const categoryFilter = selectedFilter => ({
+const changeFilter = selectedFilter => ({
   type: CHANGE_FILTER,
   selectedFilter,
 });
@@ -20,5 +20,5 @@ const categoryFilter = selectedFilter => ({
 export {
   createBook,
   removeBook,
-  categoryFilter,
+  changeFilter,
 };

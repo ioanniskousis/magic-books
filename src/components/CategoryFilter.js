@@ -6,7 +6,7 @@ function CategoryFilter(props) {
   const { filterChanged } = props;
   return (
     <div className="categoryFilter">
-      <select name="category" id="category" onChange={filterChanged}>
+      <select onChange={filterChanged}>
         {categoryFilterOptions}
       </select>
     </div>

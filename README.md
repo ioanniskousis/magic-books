@@ -78,21 +78,23 @@ The project files tree:
 ```
 -src  
   -components  
+    App.js  
     book.js  
+    CategoryFilter.js  
+  -containers  
     booksList.js  
     booksForm.js  
-  -containers  
   -actions  
     index.js  
   -reducers  
     books.js  
     index.js  
-  App.js
-  index.js
-  booksSeed.js
+    filter.js  
+  index.js  
+  booksSeed.js  
 ```
   - The entry point is root **index.js** where the **App** components is render through the **Container** components of Redux. 
-  - Componets **BooksList, Book, and BooksForm** are help in respective files in **components/** folder  
+  - Componets **BooksList, Book, and BooksForm** are held in respective files in **components/** folder  
   - Actions **createBook** and **removeBook** are in **actions/index.js**  
   - Reducers are in **reducers/** folder, currently only 1, the **booksReducer** in reducers/books.js is combined into **rootReducer** held in reducers/index.js  
   - The **App** component renders **BooksList** and **BooksForm** components  
@@ -100,6 +102,7 @@ The project files tree:
   - The **BooksForm** adds new books given that title and category are not empty  
   - The **Book** component renders a **table row** with a book's data  
   - The **booksSeed** array initializes the state with a set of books  
+  - The **CategoryFilter** implements the category filtering on the books  
 
 <hr/>
 

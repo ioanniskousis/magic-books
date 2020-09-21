@@ -96,8 +96,8 @@ The project files tree:
   - Actions **createBook** and **removeBook** are in **actions/index.js**  
   - Reducers are in **reducers/** folder, currently only 1, the **booksReducer** in reducers/books.js is combined into **rootReducer** held in reducers/index.js  
   - The **App** component renders **BooksList** and **BooksForm** components  
-  - The **BookList** components renders the **books table**  
-  - The **BooksForm** is prepared to add new books  
+  - The **BookList** components renders the **books table**. Implements removing books feature  
+  - The **BooksForm** adds new books given that title and category are not empty  
   - The **Book** component renders a **table row** with a book's data  
   - The **booksSeed** array initializes the state with a set of books  
 

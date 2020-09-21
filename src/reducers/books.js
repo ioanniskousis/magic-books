@@ -14,10 +14,13 @@ const booksReducer = (state = [], action) => {
       ];
     case REMOVE_BOOK:
     {
-      const { bookId } = action;
+      const bookId = parseInt(action.event.target.id, 10);
       const index = state.findIndex(book => bookWithId(book, bookId));
-      const newState = state.slice(0, index).concat(state.slice(index + 1));
-      return newState;
+      if (index > -1) {
+        const newState = state.slice(0, index).concat(state.slice(index + 1));
+        return newState;
+      }
+      return state;
     }
     default:
       return state;

@@ -79,6 +79,11 @@ tr {
   border-bottom: 1px solid black;
 }
 
+.categoryFilter {
+  background-color: #555;
+  padding: 20px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

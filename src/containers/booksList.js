@@ -4,34 +4,41 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { removeBook } from '../actions/index';
 import Book from '../components/book';
+import CategoryFilter from '../components/CategoryFilter';
 
-const BooksList = ({ books, removeBook }) => {
-  const rows = [];
-  books.map(book => rows.push(
-    <Book
-      key={book.id}
-      book={book}
-      removeBook={removeBook}
-    />,
-  ));
+class BooksList extends React.Component  {
+  // = ({ books, removeBook }) =>
+  render() {
+    const rows = [];
+    books.map(book => rows.push(
+      <Book
+        key={book.id}
+        book={book}
+        removeBook={removeBook}
+      />,
+    ));
 
-  return (
-    <div className="BooksList">
-      <table>
-        <thead>
-          <tr>
-            <th>Book ID</th>
-            <th>Title</th>
-            <th>Category</th>
-          </tr>
-        </thead>
-        <tbody>
-          {rows}
-        </tbody>
-      </table>
-    </div>
-  );
-};
+    return (
+      <div>
+        <CategoryFilter filterChanged={this.filterChanged} />
+        <div className="BooksList">
+          <table>
+            <thead>
+              <tr>
+                <th>Book ID</th>
+                <th>Title</th>
+                <th>Category</th>
+              </tr>
+            </thead>
+            <tbody>
+              {rows}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    );
+  }
+}
 
 BooksList.propTypes = {
   books: PropTypes.array,

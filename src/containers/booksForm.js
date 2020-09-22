@@ -1,9 +1,9 @@
 /* eslint-disable class-methods-use-this */
-/* eslint-disable no-plusplus */
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { createBook } from '../actions/index';
+import { categoryOptions } from '../categories';
 
 class BooksForm extends React.Component {
   constructor(props) {
@@ -33,7 +33,7 @@ class BooksForm extends React.Component {
 
   validate(title, category) {
     const formError = document.getElementById('formError');
-    if (title === '') {
+    if (title.trim() === '') {
       formError.innerHTML = "Title can't be empty";
       return false;
     }
@@ -69,23 +69,6 @@ class BooksForm extends React.Component {
   }
 
   render() {
-    const categoryOptions = [];
-    const categoryNames = [
-      '',
-      'Action',
-      'Biography',
-      'History',
-      'Horror',
-      'Kids',
-      'Learning',
-      'Sci-Fi',
-    ];
-
-    let index = 1;
-    categoryNames.map(categoryName => categoryOptions.push(
-      <option key={index++} value={categoryName}>{categoryName}</option>,
-    ));
-
     const { title, category } = this.state;
 
     return (

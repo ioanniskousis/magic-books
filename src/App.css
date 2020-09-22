@@ -14,19 +14,17 @@
 .BooksForm {
   position: relative;
   width: 100%;
-  /* height: 140px; */
-  /* background-color: #999; */
   padding: 0 100px 240px 100px;
   box-sizing: border-box;
 }
 
 .addNewBook {
   line-height: 24px;
-  font-family: Montserrat;
+  font-family: Montserrat, Arial, sans-serif;
   font-size: 20px;
   font-weight: bold;
   letter-spacing: -0.18px;
-  color: #888888;
+  color: #888;
   margin: 29px 0 19px 0;
 }
 
@@ -42,7 +40,7 @@
   border-radius: 4px;
   border: solid 1px #e8e8e8;
   line-height: 19px;
-  font-family: Montserrat;
+  font-family: Montserrat, Arial, sans-serif;
   font-size: 16px;
   letter-spacing: -0.15px;
   color: #c4c4c4;
@@ -74,13 +72,12 @@
   border-radius: 4px;
   border: solid 1px #e8e8e8;
   line-height: 19px;
-  font-family: Montserrat;
+  font-family: Montserrat, Arial, sans-serif;
   font-size: 16px;
   letter-spacing: -0.15px;
   color: #c4c4c4;
   padding: 13px 17px;
   width: 100%;
-  /* margin-right: 34px; */
   outline: none;
   background-color: transparent;
 }
@@ -91,35 +88,30 @@
   width: 184px;
   height: 45px;
   line-height: 18px;
-  font-family: 'Roboto Slab';
+  font-family: 'Roboto Slab', 'Courier New', Courier, monospace;
   font-size: 13px;
   font-weight: bold;
   letter-spacing: 0.5px;
   color: #fff;
   border-radius: 4px;
-  /* margin-right: 4px; */
 }
 
 .formError {
-  font-family: Montserrat;
+  font-family: Montserrat, Arial, sans-serif;
   line-height: 24px;
   font-size: 16px;
   font-weight: bold;
   color: brown;
   padding: 4px;
-  /* position: absolute; */
   width: 100%;
   left: 0;
-  /* bottom: 0; */
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: white; */
 }
 
 .BooksList {
   width: 100%;
-  /* background-color: #555; */
   padding: 38px 100px 0 100px;
   box-sizing: border-box;
 }
@@ -156,7 +148,7 @@ header {
 .bookstorecms-label {
   width: 240px;
   height: 37px;
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', Arial, sans-serif;
   font-size: 30px;
   font-weight: 700;
   color: #0290ff;
@@ -165,7 +157,7 @@ header {
 
 .header-label {
   height: 16px;
-  font-family: Montserrat;
+  font-family: Montserrat, Arial, sans-serif;
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 1.9px;
@@ -180,19 +172,12 @@ header {
 }
 
 .user-oval {
-  /* position: absolute;
-  right: 0;
-  top: calc(50% - 22px); */
   width: 45px;
   height: 45px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-image: url('/src/resources/images/guest-16.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 17px 17px; */
   border: 1px solid #e8e8e8;
 }
 
@@ -201,8 +186,6 @@ header {
 }
 
 .bookPanel {
-  /* width: 100%; */
-  /* height: 170px; */
   border: 1px solid #e8e8e8;
   border-radius: 4px;
   margin-bottom: 15px;
@@ -211,10 +194,6 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 32px 27px 28px 27px;
-}
-
-.bookDetails {
-  /* background-color: wheat; */
 }
 
 .bookMenu {
@@ -232,7 +211,7 @@ header {
 }
 
 .bookTitle {
-  font-family: 'Roboto Slab';
+  font-family: 'Roboto Slab', 'Courier New', Courier, monospace;
   font-size: 22px;
   font-weight: bold;
   font-stretch: normal;
@@ -244,7 +223,7 @@ header {
 
 .bookCategory {
   opacity: 0.5;
-  font-family: Montserrat;
+  font-family: Montserrat, Arial, sans-serif;
   font-size: 14px;
   font-weight: bold;
   line-height: 18px;
@@ -252,7 +231,7 @@ header {
 }
 
 .writer-name {
-  font-family: 'Roboto Slab';
+  font-family: 'Roboto Slab', 'Courier New', Courier, monospace;
   font-size: 14px;
   font-weight: 300;
   color: #4386bf;
@@ -262,7 +241,7 @@ header {
 
 .bookMenu button {
   border: none;
-  font-family: 'Roboto Slab';
+  font-family: 'Roboto Slab', 'Courier New', Courier, monospace;
   font-size: 14px;
   font-weight: 300;
   color: #4386bf;
@@ -273,9 +252,7 @@ header {
 }
 
 .bookProgress {
-  /* background-color: #ccc; */
   width: 55%;
-  /* height: 100%; */
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -284,10 +261,6 @@ header {
 .progressOval {
   width: 68px;
   height: 68px;
-  /* border-style: solid;
-  border-width: 5px;
-  border-image-source: linear-gradient(to bottom, #307bbe, #379cf6);
-  border-image-slice: 1; */
   border: 5px solid #307bbe;
   border-radius: 50%;
 }
@@ -297,14 +270,14 @@ header {
 }
 
 .progressPerc {
-  font-family: Montserrat;
+  font-family: Montserrat, Arial, sans-serif;
   font-size: 32px;
   color: #121212;
 }
 
 .progressPercLab {
   opacity: 0.5;
-  font-family: Montserrat;
+  font-family: Montserrat, Arial, sans-serif;
   font-size: 14px;
   color: #121212;
 }
@@ -322,14 +295,13 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  /* text-align: left; */
 }
 
 .currentChapterLab {
   width: 126px;
   height: 18px;
   opacity: 0.5;
-  font-family: 'Roboto Slab';
+  font-family: 'Roboto Slab', 'Courier New', Courier, monospace;
   font-size: 13px;
   font-weight: 300;
   color: #121212;
@@ -338,7 +310,7 @@ header {
 
 .currentChapter {
   line-height: 21px;
-  font-family: 'Roboto Slab';
+  font-family: 'Roboto Slab', 'Courier New', Courier, monospace;
   font-size: 16px;
   font-weight: 300;
   letter-spacing: -0.4px;
@@ -350,7 +322,7 @@ header {
   background-color: #0290ff;
   border: none;
   color: #fff;
-  font-family: RobotoSlab;
+  font-family: 'Roboto Slab', 'Courier New', Courier, monospace;
   font-size: 13px;
   font-weight: 300;
   letter-spacing: 0.5px;
@@ -371,7 +343,7 @@ header {
   header {
     padding: 0 30px;
   }
-  
+
   .headerContainer-left {
     flex-direction: column;
     align-items: flex-start;

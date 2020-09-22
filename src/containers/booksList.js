@@ -45,6 +45,7 @@ class BooksList extends React.Component {
         <CategoryFilter filterChanged={this.filterChanged} />
         <div className="BooksList">
           {rows}
+          <div className="booksList-bline" />
         </div>
       </div>
     );

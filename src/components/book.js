@@ -73,16 +73,6 @@ export default function Book(props) {
         </div>
       </div>
     </div>
-    // <tr key={id}>
-    //   <td>{id}</td>
-    //   <td>{title}</td>
-    //   <td>{category}</td>
-    //   <td>
-    //     <button type="button" onClick={removeBook} id={id}>
-    //       Remove
-    //     </button>
-    //   </td>
-    // </tr>
   );
 }
 

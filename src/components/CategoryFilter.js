@@ -5,11 +5,30 @@ import { categoryFilterOptions } from '../categories';
 function CategoryFilter(props) {
   const { filterChanged } = props;
   return (
-    <div className="categoryFilter">
-      <select onChange={filterChanged}>
+    <header>
+      <div className="headerContainer">
+        <div className="headerContainer-left">
+          <div className="bookstorecms-label">
+            Bookstore CMS
+          </div>
+          <div className="header-label">
+            BOOKS
+          </div>
+          <div className="header-label opacity05">
+            CATEGORIES
+          </div>
+        </div>
+        <div className="headerContainer-right">
+          <div className="user-oval">
+            <img src="guest-16.png" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <select className="categorySelect" onChange={filterChanged}>
         {categoryFilterOptions}
       </select>
-    </div>
+    </header>
   );
 }
 

@@ -44,18 +44,7 @@ class BooksList extends React.Component {
       <div>
         <CategoryFilter filterChanged={this.filterChanged} />
         <div className="BooksList">
-          <table>
-            <thead>
-              <tr>
-                <th>Book ID</th>
-                <th>Title</th>
-                <th>Category</th>
-              </tr>
-            </thead>
-            <tbody>
-              {rows}
-            </tbody>
-          </table>
+          {rows}
         </div>
       </div>
     );

@@ -1,68 +1,201 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Magic Books
 
-## Available Scripts
+<!--
+*** Thanks for checking out this README Template. If you have a suggestion that would
+*** make this better, please fork the repo and create a pull request or simply open
+*** an issue with the tag "enhancement".
+*** Thanks again! Now go create something AMAZING! :D
+-->
 
-In the project directory, you can run:
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
 
-### `yarn start`
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/ioanniskousis/magic-books">
+    <img src="src/resources/images/microverse.png" alt="Microverse Logo" width="80" height="80">
+  </a>
+  
+  <h3 align="center">The Magic Books Application</h3>
+  
+  <p align="center">
+    This project is part of the Microverse curriculum in React course!
+    <br />
+    <a href="https://github.com/ioanniskousis/magic-books"><strong>Explore the docs</strong></a>
+    <br />
+    <a href="https://magic-books-jgk.herokuapp.com">Live Version</a>
+    <br />
+    <a href="https://github.com/ioanniskousis/magic-books/issues">Report Bug</a>
+    <span> - </span>
+    <a href="https://github.com/ioanniskousis/magic-books/issues">Request Feature</a>
+  </p>
+</p>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## This is a Book Store application
 
-### `yarn test`
+<hr />
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<!-- TABLE OF CONTENTS -->
 
-### `yarn build`
+## Table of Contents
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [Screen Shots](#screen-shots)
+- [About the Project](#about-the-project)
+- [Application Instructions](#application-instructions)
+- [Live Version](#live-version)
+- [System Requierments](#system-requierments)
+- [Development](#development)
+- [Dependencies](#dependencies)
+- [Built With](#built-with)
+- [Contributors](#contributors)
+- [Acknowledgements](#acknowledgements)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Screen Shots
+<img src="./src/resources/images/magic-books.png" alt="magic-books.png">
+<hr />
+<img src="./src/resources/images/magic-books1.png" alt="magic-books.png">
+<hr />
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<!-- ABOUT THE PROJECT -->
 
-### `yarn eject`
+## About The Project
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The project was created using the create-react-app model
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The project files tree:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+-src  
+  -components  
+    App.js  
+    book.js  
+    CategoryFilter.js  
+  -containers  
+    booksList.js  
+    booksForm.js  
+  -actions  
+    index.js  
+  -reducers  
+    books.js  
+    index.js  
+    filter.js  
+  index.js  
+  booksSeed.js  
+```
+  - The entry point is root **index.js** where the **App** components is render through the **Container** components of Redux. 
+  - Componets **BooksList, Book, and BooksForm** are held in respective files in **components/** folder  
+  - Actions **createBook** and **removeBook** are in **actions/index.js**  
+  - Reducers are in **reducers/** folder, currently only 1, the **booksReducer** in reducers/books.js is combined into **rootReducer** held in reducers/index.js  
+  - The **App** component renders **BooksList** and **BooksForm** components  
+  - The **BookList** components renders the **books table**. Implements removing books feature  
+  - The **BooksForm** adds new books given that title and category are not empty  
+  - The **Book** component renders a **table row** with a book's data  
+  - The **booksSeed** array initializes the state with a set of books  
+  - The **CategoryFilter** implements the category filtering on the books  
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<hr/>
 
-## Learn More
+<!-- ABOUT THE PROJECT -->
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Application Instructions
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<hr/>
 
-### Code Splitting
+## Live Version
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+[Heroku](https://magic-books-jgk.herokuapp.com)
 
-### Analyzing the Bundle Size
+<hr/>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## System Requierments
 
-### Making a Progressive Web App
+- JavaScript Enabled
+- You need to Disable Cross-Origin-Restrictions from your browser if you want to open the index.html from your file system without using a server.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+<hr/>
 
-### Advanced Configuration
+## Development
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+- Clone the project
 
-### Deployment
+```
+  https://github.com/ioanniskousis/magic-books.git
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+  Use VSCode and Live Server to show index.html
+  Since webpack is used, run 'npm run build' on you terminal before opening
+```
 
-### `yarn build` fails to minify
+<hr/>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Dependencies
+
+please run
+
+```
+  npm run build
+```
+
+to comply with the dependencies held in package.json
+
+<hr/>
+
+## Built With
+
+This project was built using these technologies.
+
+- React
+- Redux
+- CSS3
+- webpack
+- Git - GitHub
+- ESLint
+- Stylelint
+- heroku
+
+<hr/>
+
+<!-- CONTACT -->
+
+## Contributors
+
+:bust_in_silhouette:
+​
+
+## Ioannis Kousis
+
+- Github: [@ioanniskousis](https://github.com/ioanniskousis)
+- Twitter: [@ioanniskousis](https://twitter.com/ioanniskousis)
+- Linkedin: [Ioannis Kousis](https://www.linkedin.com/in/jgkousis)
+- E-mail: jgkousis@gmail.com
+​
+<hr/>
+<!-- ACKNOWLEDGEMENTS -->
+
+## Acknowledgements
+
+- [Microverse](https://www.microverse.org/)
+- [The Odin Project](https://www.theodinproject.com/)
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[contributors-shield]: https://img.shields.io/github/contributors/ioanniskousis/magic-books.svg?style=flat-square
+[contributors-url]: https://github.com/ioanniskousis/magic-books/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/ioanniskousis/magic-books.svg?style=flat-square
+[forks-url]: https://github.com/ioanniskousis/magic-books/network/members
+[stars-shield]: https://img.shields.io/github/stars/ioanniskousis/magic-books.svg?style=flat-square
+[stars-url]: https://github.com/ioanniskousis/magic-books/stargazers
+[issues-shield]: https://img.shields.io/github/issues/ioanniskousis/magic-books.svg?style=flat-square
+[issues-url]: https://github.com/ioanniskousis/magic-books/issues

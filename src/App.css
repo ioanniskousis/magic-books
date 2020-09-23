@@ -1,39 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;700&display=swap');
+
+#root {
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+}
+
 .App {
-  text-align: center;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #fafafa;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.BooksForm {
+  position: relative;
+  width: 100%;
+  padding: 0 100px 240px 100px;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.addNewBook {
+  line-height: 24px;
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: -0.18px;
+  color: #888;
+  margin: 29px 0 19px 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.bookFormDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+#title {
+  width: 55%;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  line-height: 19px;
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.15px;
+  color: #c4c4c4;
+  padding: 13px 17px;
+  margin-right: 45px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.categoryContainer {
+  width: 285px;
+  margin-right: 34px;
+  position: relative;
+  background-image: url("./categoryArrow.png");
+  background-repeat: no-repeat;
+  background-position: right 20px top 20px;
+  background-size: 12px 16px;
+  background-color: #fff;
+}
+
+.categoryArrow {
+  position: absolute;
+  right: 20px;
+  top: 22px;
+}
+
+#category {
+  appearance: none;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  line-height: 19px;
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.15px;
+  color: #c4c4c4;
+  padding: 13px 17px;
+  width: 100%;
+  outline: none;
+  background-color: transparent;
+  margin: 0;
+}
+
+#newBook {
+  border: none;
+  background-color: #0290ff;
+  width: 184px;
+  height: 45px;
+  line-height: 18px;
+  font-family: 'Roboto Slab', 'Courier New', Courier, monospace;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.formError {
+  font-family: Montserrat, Arial, sans-serif;
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: bold;
+  color: brown;
+  padding: 4px;
+  width: 100%;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.BooksList {
+  width: 100%;
+  padding: 38px 100px 0 100px;
+  box-sizing: border-box;
+}
+
+header {
+  height: 95px;
+  padding: 0 100px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid #e8e8e8;
+}
+
+.headerContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerContainer-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerContainer-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bookstorecms-label {
+  width: 240px;
+  height: 37px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #0290ff;
+  display: inline-block;
+}
+
+.header-label {
+  height: 16px;
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1.9px;
+  color: #121212;
+  display: inline-block;
+  margin-left: 47px;
+  cursor: pointer;
+}
+
+.opacity05 {
+  opacity: 0.5;
+}
+
+.user-oval {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e8e8e8;
+}
+
+.categorySelect {
+  display: none;
+}
+
+.bookPanel {
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 27px 28px 27px;
+}
+
+.bookMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bookMenuContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.bookMenu-vline {
+  width: 2px;
+  height: 24px;
+  border: solid 1px #e8e8e8;
+  box-sizing: border-box;
+  margin: auto 17px;
+}
+
+.bookTitle {
+  font-family: 'Roboto Slab', 'Courier New', Courier, monospace;
+  font-size: 22px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 29px;
+  letter-spacing: -0.2px;
+  color: #121212;
+}
+
+.bookCategory {
+  opacity: 0.5;
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 18px;
+  color: #121212;
+}
+
+.writer-name {
+  font-family: 'Roboto Slab', 'Courier New', Courier, monospace;
+  font-size: 14px;
+  font-weight: 300;
+  color: #4386bf;
+  line-height: 19px;
+  margin-bottom: 21px;
+}
+
+.bookMenu button {
+  border: none;
+  font-family: 'Roboto Slab', 'Courier New', Courier, monospace;
+  font-size: 14px;
+  font-weight: 300;
+  color: #4386bf;
+  background-color: transparent;
+  padding: 0;
+  line-height: 19px;
+  cursor: pointer;
+}
+
+.bookProgress {
+  width: 55%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.progressOval {
+  width: 68px;
+  height: 68px;
+  border: 5px solid #307bbe;
+  border-radius: 50%;
+}
+
+.progressVals {
+  margin-left: 22px;
+}
+
+.progressPerc {
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 32px;
+  color: #121212;
+}
+
+.progressPercLab {
+  opacity: 0.5;
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 14px;
+  color: #121212;
+}
+
+.progress-vline {
+  width: 2px;
+  height: 70px;
+  border: solid 1px #e8e8e8;
+  box-sizing: border-box;
+  margin: 0 59px 0 79px;
+}
+
+.progressChapter {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-start;
 }
 
-.App-link {
-  color: #61dafb;
+.currentChapterLab {
+  width: 126px;
+  height: 18px;
+  opacity: 0.5;
+  font-family: 'Roboto Slab', 'Courier New', Courier, monospace;
+  font-size: 13px;
+  font-weight: 300;
+  color: #121212;
+  margin-bottom: 7px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.currentChapter {
+  line-height: 21px;
+  font-family: 'Roboto Slab', 'Courier New', Courier, monospace;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: -0.4px;
+  color: #121212;
+  margin-bottom: 23px;
+}
+
+.progressChapter button {
+  background-color: #0290ff;
+  border: none;
+  color: #fff;
+  font-family: 'Roboto Slab', 'Courier New', Courier, monospace;
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  line-height: 18px;
+  padding: 7px 27px 8px 30px;
+  border-radius: 4px;
+}
+
+.booksList-bline {
+  width: 100%;
+  height: 1px;
+  border: 1px solid #e8e8e8;
+  box-sizing: border-box;
+  margin-top: 40px;
+}
+
+@media only screen and (max-width: 1000px) {
+  header {
+    padding: 0 30px;
   }
 
-  to {
-    transform: rotate(360deg);
+  .headerContainer-left {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-label {
+    margin-left: 0;
+  }
+
+  .BooksList {
+    padding: 38px 30px 0 30px;
+  }
+
+  .BooksForm {
+    padding: 0 30px;
+  }
+
+  .progress-vline {
+    margin: 0 15px 0 15px;
+  }
+
+  .bookFormDetails {
+    flex-direction: column;
+  }
+
+  #title,
+  .categoryContainer,
+  #newBook {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .bookPanel {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .bookPanel > div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .bookDetails {
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 2px solid  #e8e8e8;
+  }
+
+  .bookMenu {
+    width: 240px;
+  }
+
+  .bookProgress {
+    width: 100%;
   }
 }

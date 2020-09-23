@@ -26,22 +26,24 @@ export default function Book(props) {
           {writer}
         </div>
         <div className="bookMenu">
-          <div>
-            <button type="button">
-              Comments
-            </button>
-          </div>
-          <div className="bookMenu-vline" />
-          <div>
-            <button type="button" onClick={removeBook} id={id}>
-              Remove
-            </button>
-          </div>
-          <div className="bookMenu-vline" />
-          <div>
-            <button type="button">
-              Edit
-            </button>
+          <div className="bookMenuContainer">
+            <div>
+              <button type="button">
+                Comments
+              </button>
+            </div>
+            <div className="bookMenu-vline" />
+            <div>
+              <button type="button" onClick={removeBook} id={id}>
+                Remove
+              </button>
+            </div>
+            <div className="bookMenu-vline" />
+            <div>
+              <button type="button">
+                Edit
+              </button>
+            </div>
           </div>
         </div>
       </div>

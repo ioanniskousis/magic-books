@@ -203,6 +203,12 @@ header {
   align-items: center;
 }
 
+.bookMenuContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .bookMenu-vline {
   width: 2px;
   height: 24px;

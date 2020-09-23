@@ -63,8 +63,9 @@
 - [Acknowledgements](#acknowledgements)
 
 ## Screen Shots
-
 <img src="./src/resources/images/magic-books.png" alt="magic-books.png">
+<hr />
+<img src="./src/resources/images/magic-books1.png" alt="magic-books.png">
 <hr />
 
 <!-- ABOUT THE PROJECT -->
